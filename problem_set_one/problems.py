@@ -2,15 +2,7 @@
 
 
 def find_pairs_with_difference(input_set, difference):
-  pairs_with_difference = []
-  sorted_set = sorted(input_set)
-  print(sorted_set)
-  for index, value in enumerate(sorted_set):
-    for value2 in sorted_set[index + 1:]:
-      if (value2 - value == difference):
-        print (value, value2)
-        pairs_with_difference.append((value, value2))
-  return pairs_with_difference
+  return [(value, value+difference) for value in input_set if (value + difference) in input_set]
 
 
 
