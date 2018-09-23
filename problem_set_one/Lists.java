@@ -6,19 +6,7 @@ class LinkedList {
     LinkedList() {
 
     }
-
-    public static void main(String[] args) {
-        LinkedList l = new LinkedList();
-        l.add(1);
-        l.add(2);
-        l.add(3);
-        l.add(4);
-
-        System.out.println(l.delete(2));
-//        System.out.println(l.toString());
-        System.out.println(l.size());
-
-    }
+    
     void add(Object data) {
         Node newNode = new Node(data);
         if (this.rootNode == null) {
@@ -100,6 +88,6 @@ class Node {
 
     @Override
     public String toString() {
-        return "Data: " + data + ", Next Node: " + nextNode;
+        return "Data: " + data ;
     }
 }
