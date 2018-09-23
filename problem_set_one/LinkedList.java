@@ -3,15 +3,14 @@ package problem_set_one;
 import java.util.HashSet;
 import java.util.Set;
 
-
-class LinkedList {
+public class LinkedList {
     private Node rootNode;
 
     LinkedList() {
 
     }
 
-    void add(Object data) {
+    public void add(Object data) {
         Node newNode = new Node(data);
         if (this.rootNode == null) {
             this.rootNode = new Node(data);
@@ -27,7 +26,7 @@ class LinkedList {
         currentNode.setNextNode(newNode);
     }
 
-    int size(){
+    public int size(){
         if(this.rootNode == null){
             return 0;
         }
@@ -40,7 +39,7 @@ class LinkedList {
         return count;
     }
 
-    Node delete(Object data){
+    public Node delete(Object data){
         // todo Handle Null data
         if(this.rootNode == null) return null;
         Node deletedNode = null;
@@ -64,7 +63,7 @@ class LinkedList {
         return deletedNode;
     }
 
-    void removeDuplicates(){
+    public void removeDuplicates(){
         if(this.rootNode == null) return;
 
         Node currentNode = this.rootNode;
@@ -89,7 +88,7 @@ class LinkedList {
         return this.rootNode!=null ? this.rootNode.toString() : "Empty List";
     }
 
-    class Node {
+    private class Node {
         private Node nextNode;
         private Object data;
 
