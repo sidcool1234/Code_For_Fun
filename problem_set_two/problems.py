@@ -1,6 +1,6 @@
 # https://www.interviewbit.com/problems/min-steps-in-infinite-grid/
 
-class Solution:
+class Solution_p1:
   # @param A : list of integers
   # @param B : list of integers
   # @return an integer
@@ -63,20 +63,19 @@ class Solution:
     return count
 
 
-def test_cover_pair():
-  print(Solution().cover_pair([0,1], [4,3]))
-  print(Solution().cover_pair([-7, -13], [1, -5]))
+class Solution:
+  def addTwoNumbers(self, l1, l2):
+      l1.reverse()
+      l2.reverse()
 
-#
-# def test_cover_points():
-#   x = Solution().cover_points([-7, -13], [1, -5])
-#   print(x)
-#
-# test_cover_points()
+      print(l1, l2)
 
-def test_another_cover_pair():
-  print(Solution().another_cover_pair([0,1], [4,3]))
-  print(Solution().another_cover_pair([-7, -13], [1, -5]))
+      total = int("".join("{0}".format(n) for n in l1)) + int("".join("{0}".format(n) for n in l2))
+      list = []
+      for i in reversed(str(total)):
+        list.append(i)
 
-test_cover_pair()
-test_another_cover_pair()
+      return list
+
+print(Solution().addTwoNumbers([2,4,3], [5,6,4]))
+
