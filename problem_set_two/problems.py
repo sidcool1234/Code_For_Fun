@@ -68,7 +68,7 @@ class Solution:
       l1.reverse()
       l2.reverse()
 
-      print(l1, l2)
+      print(l1, l2) 
 
       total = int("".join("{0}".format(n) for n in l1)) + int("".join("{0}".format(n) for n in l2))
       list = []
@@ -77,3 +77,10 @@ class Solution:
 
       return list
 
+  def fibonacci(self, till_number):
+    if till_number <= 1:
+      return till_number
+
+    return self.fibonacci(till_number - 1) + self.fibonacci(till_number - 2)
+
+print(Solution().fibonacci(12))
